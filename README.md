@@ -21,53 +21,38 @@ Users can chat back and forth in two browser windows or devices, with each perso
 
 ---
 
-## 📂 Project Structure
-
-live-chat/
-├── node_modules/ # Installed dependencies
-├── public/ # Static front‑end files
-│ ├── client.js # Browser‑side JavaScript
-│ ├── index.html # Main HTML page
-│ └── styles.css # CSS for layout & styling
-├── package.json # Project metadata & scripts
-└── server.js # Express + Socket.io server
-
-yaml
-Copy code
-
----
-
 ## ⚙️ Installation
 
 1. **Clone or download** this repo into a folder, e.g. `live-chat`.  
 2. Open your terminal/command prompt and navigate into the project folder:
    ```bash
    cd path/to/live-chat
+   ```
 Install dependencies with npm:
 
-bash
-Copy code
+```bash
 npm install
+```
 ▶️ Running the App
 From inside the live-chat folder (where server.js lives), start the server:
 
-bash
-Copy code
+```bash
 node server.js
 You should see:
+```
 
-arduino
-Copy code
+```arduino
+
 Server is running on http://localhost:3000
 Open your browser and go to http://localhost:3000.
-
+```
 When prompted, enter a username (e.g. “Alice”).
 
 To chat with a second user, open a second browser window or tab (or another device on the same network) and visit the same URL:
 
-arduino
-Copy code
+```arduino
 http://localhost:3000
+```
 Enter a different username (e.g. “Bob”).
 
 Type messages and hit Send (or press Enter).
@@ -90,9 +75,9 @@ To restart, simply refresh both browser windows and re‑enter usernames.
 Port 3000 already in use
 → Either stop the other process using port 3000, or edit the port in server.js:
 
-js
-Copy code
+```js
 const PORT = process.env.PORT || 5000;
+```
 Blank page or missing files
 → Verify you have this exact folder structure and that server.js is running in the project root, not under public/.
 
